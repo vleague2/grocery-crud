@@ -1,6 +1,6 @@
 # Grocery CRUD in AngularJS 1.5
 
-This application is a simple grocery-list tracker that utilizes CRUD methods with Firebase. It's built using AngularJS 1.x, and is mobile responsive.
+This application is a simple grocery-list tracker that utilizes CRUD methods with Firebase. It's built using AngularJS 1.5, and is mobile responsive.
 
 ## Technologies
 Technology | Purpose
