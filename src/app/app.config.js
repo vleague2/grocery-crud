@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-.config(function($stateProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
 
     // first view is the groceries to buy
     let buyState = {
@@ -19,4 +19,7 @@ angular.module('app')
     
     $stateProvider.state(buyState);
     $stateProvider.state(purchasedState);
+
+    // default view at home will be groceries
+    $urlRouterProvider.when('/', '/groceries');
 });
