@@ -14,6 +14,14 @@ Normalize.css | Standardize browser rendering of HTML
 
 ![GIF of Grocery CRUD](./screencast.gif)
 
+## How to Use the App
+The application is currently not hosted anywhere. You can view it on your machine locally with the following steps: 
+
+* Clone down the repo.
+* Run "npm install" in the command line to install the required node modules.
+* Navigate to index.html in the src folder.
+* Open index.html in the browser.
+
 ## How the App Works
 * The application displays the grocery list by default and pulls un-purchased items from the Firebase collection.
 * The user is able to delete current items from the database if they no longer wish to purchase them, which utilizes Firebase's remove method.
