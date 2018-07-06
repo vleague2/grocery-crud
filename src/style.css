@@ -1,0 +1,142 @@
+.navbar {
+  text-align: center;
+  margin-top: 0px;
+  background-color: #5d945d;
+}
+.navbar p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-family: 'Leckerli One', cursive;
+  color: white;
+}
+nav {
+  background-color: #8eca8e;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 50px;
+}
+nav a {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: #385a38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 460px) {
+  nav a {
+    font-size: 14px;
+  }
+}
+nav #left-nav {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@media screen and (max-width: 830px) {
+  nav #left-nav {
+    grid-column-start: 1;
+  }
+}
+nav #right-nav {
+  grid-column: 3;
+  grid-row-start: 1;
+}
+@media screen and (max-width: 830px) {
+  nav #right-nav {
+    grid-column-start: 2;
+  }
+}
+nav .active {
+  background-color: white;
+}
+@media screen and (max-width: 830px) {
+  nav {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+.container {
+  text-align: center;
+  width: 50%;
+  padding-top: 40px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 830px) {
+  .container {
+    width: 100%;
+  }
+}
+.checkbox {
+  margin-right: 15px;
+}
+.unstyled {
+  list-style-type: none;
+  padding-left: 0px;
+}
+input[type=text] {
+  padding: 10px 0px 10px 5px;
+  margin-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  width: 50%;
+  border-radius: 2px;
+}
+.grocery-item {
+  margin-bottom: 20px;
+  border: 2px solid #8eca8e;
+  transition: all 0.4s;
+}
+.grocery-item:focus {
+  outline: none;
+  border-color: #385a38;
+}
+.new-item-text {
+  border: 1.5px solid lightgray;
+  transition: all 0.4s;
+}
+.new-item-text:focus {
+  outline: none;
+  border-color: #777777;
+}
+.btn {
+  background-color: #385a38;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  border-radius: 2px;
+  padding: 6px 9px;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+hr {
+  width: 75%;
+  margin-bottom: 30px;
+}
+.fa-times-circle {
+  color: red;
+  cursor: pointer;
+}
+.done-true {
+  display: inline-block;
+  text-decoration: line-through;
+  color: grey;
+  margin: 0px 10px 20px 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+h2 {
+  font-family: 'Leckerli One', cursive;
+  color: #2c2c2c;
+}
+.count {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}

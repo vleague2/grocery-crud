@@ -1,0 +1,168 @@
+// google font variables
+@leckerli: 'Leckerli One', cursive;
+@opensans: 'Open Sans', sans-serif;
+
+// color variables
+@darkgrey: rgb(44, 44, 44);
+@medgrey: rgb(119, 119, 119);
+@lightgreen: rgb(142, 202, 142);
+@medgreen: rgb(93, 148, 93);
+@darkgreen: rgb(56, 90, 56);
+
+// Navbar at top of page
+.navbar {
+    text-align: center;
+    margin-top: 0px;
+    background-color: @medgreen;
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 32px;
+        font-family: @leckerli;
+        color: white;
+    }
+}
+
+// nav elements below navbar
+nav {
+    background-color: @lightgreen;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 50px;
+    a {
+        font-size: 18px;
+        font-family: @opensans;
+        text-decoration: none;
+        color: @darkgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 460px) {
+            font-size: 14px;
+        } 
+    }
+    #left-nav {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        @media screen and (max-width: 830px) {
+            grid-column-start: 1;
+        }
+    }
+    #right-nav {
+        grid-column: 3;
+        grid-row-start: 1;
+        @media screen and (max-width: 830px) {
+            grid-column-start: 2;
+        }
+    }
+    .active {
+        background-color: white;
+    }
+    @media screen and (max-width: 830px) {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+// container for content
+.container {
+    text-align: center;
+    width: 50%;
+    padding-top: 40px;
+    margin: auto;
+    margin-bottom: 70px;
+    @media screen and (max-width: 830px) {
+        width: 100%;
+    }
+}
+
+// checkboxes
+.checkbox {
+    margin-right: 15px;
+}
+
+// unordered list
+.unstyled {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+// input fields with type of text
+input[type=text] {
+    padding: 10px 0px 10px 5px;
+    margin-right: 20px;
+    font-family: @opensans;
+    font-size: 14px;
+    width: 50%;
+    border-radius: 2px;
+}
+
+// editable inputs for grocery items
+.grocery-item {
+    margin-bottom: 20px;
+    border: 2px solid @lightgreen;
+    transition: all 0.4s;
+    &:focus {
+        outline: none;
+        border-color: @darkgreen;
+    }
+}
+
+// input for a new grocery item
+.new-item-text {
+    border: 1.5px solid lightgray;
+    transition: all 0.4s;
+    &:focus {
+        outline: none;
+        border-color: @medgrey;
+    }
+}
+
+// button format
+.btn {
+    background-color: @darkgreen;
+    color: white;
+    font-family: @opensans;
+    border: none;
+    border-radius: 2px;
+    padding: 6px 9px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+hr {
+    width: 75%;
+    margin-bottom: 30px;
+}
+
+// font awesome circle X icon
+.fa-times-circle {
+    color: red;
+    cursor: pointer;
+}
+
+// grocery items that have been bought
+.done-true {
+    display: inline-block;
+    text-decoration: line-through;
+    color: grey;
+    margin: 0px 10px 20px 10px;
+    font-family: @opensans;
+    font-size: 14px;
+}
+
+h2 {
+    font-family: @leckerli;
+    color: @darkgrey;
+}
+
+// text with item count
+.count {
+    font-family: @opensans;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
