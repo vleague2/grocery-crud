@@ -2,32 +2,7 @@
 
 angular.module('groceryNeeded')
 .component('groceryNeeded', {
-    template:
-    `
-        <h2>Today's Meal Ingredients</h2>
-        <div>
-            <p class="count" ng-if="remaining() > 0">You have {{remaining()}} item(s) left to purchase</p>
-            <p class="count" ng-if="remaining() === 0">You bought everything!</p>
-            <ul class="unstyled">
-                <!--loop through grocery list and display if the grocery is not purchased -->
-                <li ng-repeat="grocery in groceries" ng-if="grocery.done === false">
-                    <label class="checkbox"></label>
-                    <input type="checkbox" class="checkbox" ng-click="markComplete(grocery)"></input>
-                    <!-- firebase function to update an item in the array as it's edited-->
-                    <input type="text" class="grocery-item done-{{grocery.done}}" ng-model="grocery.text" ng-change="groceries.$save(grocery)"></input>
-                    <!-- firebase function to remove the item from the array -->
-                    <span ng-click="groceries.$remove(grocery)"><i class="fas fa-times-circle"></i></span>
-                </li>
-            </ul>
-            <hr>
-            <form ng-submit="addItem()">
-                <input type="text" ng-model="newItemText" class="new-item-text"  size="30"
-                        placeholder="add new item here">
-                <input class="btn" type="submit" value="add">
-            </form>
-        </div>
-    `
-    ,
+    templateUrl: './src/app/templates/grocery.html',
 
     controller: function($scope, $firebaseArray, $sanitize) {
 
