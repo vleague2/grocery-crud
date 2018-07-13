@@ -21,5 +21,6 @@ angular.module('app')
     $stateProvider.state(purchasedState);
 
     // default view at home will be groceries
+    // this broke when I added a server
     $urlRouterProvider.when('/', '/groceries');
 });

@@ -9,6 +9,8 @@ AngularJS 1.5 | Design and structure the front-end
 Firebase | Host the application's data
 LESS | Create and structure CSS 
 Normalize.css | Standardize browser rendering of HTML
+Node.js | Code the back-end
+Express.js | Build server to host application
 
 ## The App in Action
 
@@ -19,11 +21,13 @@ The application is currently not hosted anywhere. You can view it on your machin
 
 * Clone down the repo.
 * Run "npm install" in the command line to install the required node modules.
-* Navigate to index.html in the src folder.
-* Open index.html in the browser.
+* Run "node server.js" or "nodemon" in the command line. 
+* The server should start on port 8000 and log that it is online.
+* Open localhost:8000 on your machine.
+* Click on "Shopping List".
 
 ## How the App Works
-* The application displays the grocery list by default and pulls un-purchased items from the Firebase collection.
+* The application displays the grocery list and pulls un-purchased items from the Firebase collection.
 * The user is able to delete current items from the database if they no longer wish to purchase them, which utilizes Firebase's remove method.
 * The user can edit current items, which utilizes Firebase's update method as the user types.
 * The user can add a new item to the list, which utilizes Firebase's add method.
@@ -33,6 +37,6 @@ The application is currently not hosted anywhere. You can view it on your machin
 * The user can un-check an item to move it back to the grocery list.
 
 ## Limitations
-* The application is currently undeployed and needs to utilize Webpack to be hosted on Heroku.
+* The application is currently undeployed.
 * The application would benefit from being updated and rewritten in Typescript and ES6.
 * The application's Angular file and folder structure should be updated to the most effective standards.
